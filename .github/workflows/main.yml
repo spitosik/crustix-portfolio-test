@@ -30,4 +30,4 @@ jobs:
             cd /var/www/site_torpie
             git fetch origin main
             git reset --hard origin/main
-	  	
+            true
