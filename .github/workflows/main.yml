@@ -27,7 +27,6 @@ jobs:
           # Давай лучше попробуем самый мощный вариант:
           script_stop: true
           script: |
-            git config --global --add safe.directory /var/www/site_torpie
             cd /var/www/site_torpie
             git fetch origin main
             git reset --hard origin/main
