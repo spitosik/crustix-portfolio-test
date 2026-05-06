@@ -14,13 +14,21 @@ jobs:
       - name: SSH and Deploy
         uses: appleboy/ssh-action@master
         with:
+        - name: SSH and Deploy
+        uses: appleboy/ssh-action@master
+        with:
           host: 93.189.228.45
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # ДОБАВЬ ВОТ ЭТУ СТРОЧКУ НИЖЕ:
+          fingerprint: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC0S90U+e/E8u3o/5E/S5k6nK0jG7eL8y9m3H/8L7e/8" 
+          # Или если не знаешь фингерпринт, используй это (менее безопасно, но сработает):
+          # proxy_host: "" 
+          # Давай лучше попробуем самый мощный вариант:
+          script_stop: true
           script: |
+            git config --global --add safe.directory /var/www/site_torpie
             cd /var/www/site_torpie
-            git fetch --all
+            git fetch origin main
             git reset --hard origin/main
-            # Если у тебя Flask:
-            pkill -f app.py || true
-            nohup python3 app.py > log.txt 2>&1 &
+	  	
