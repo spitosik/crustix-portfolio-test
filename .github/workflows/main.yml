@@ -19,7 +19,9 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /var/www/site_torpie
-            git fetch origin main
-            git reset --hard origin/main
-            echo "Deploy successful"
+            exec > /dev/null 2>&1
+            cd /var/www/site_torpie && {
+              git fetch origin main
+              git reset --hard origin/main
+            } &
+            disown
