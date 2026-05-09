@@ -108,11 +108,4 @@ body {
     font-size: 25px;
     font-weight: 700;
     cursor: pointer;
-
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0 0 0px rgba(255, 174, 0, 0);
-}
-
-.buy-btn:hover {
-    box-shadow: 0 0 15px #FFAE00;
 }
