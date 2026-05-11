@@ -142,7 +142,7 @@ body {
         height: 60px;
         font-size: 222%;
         margin-top: 0px;
-        max-width: 150px;
+        max-width: 800px;
     }
 
     .footer-container {
@@ -153,6 +153,16 @@ body {
         border: 5px solid #FFFFFF;
         border-radius: 15px;
     }
+
+    .footer-text {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+     .footer-icons img {
+        margin-top: 20px;
+        width: 70px;
+     }
 
 
 }
