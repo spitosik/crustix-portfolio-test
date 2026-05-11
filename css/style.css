@@ -47,9 +47,9 @@ body {
 
 @media (max-width: 500px) {
     .main-btn, .shop-btn, .support-btn {
-        width: 150px;
+        width: 130px;
         height: 50px;
-        font-size: 10px;
+        font-size: 20px;
     }
 }
 
