@@ -45,6 +45,15 @@ body {
     }
 }
 
+@media (max-width: 500px) {
+    .main-btn, .shop-btn, .support-btn {
+        width: 150px;
+        height: 50px;
+        font-size: 10px;
+    }
+}
+
+
 
 .main-container-img {
     width: 1100px;
