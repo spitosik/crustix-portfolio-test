@@ -50,6 +50,7 @@ body {
     width: 100%;
     user-select: none;
     max-width: 1100px;
+    margin-left: 10px;
 }
 
 .server-ip {
